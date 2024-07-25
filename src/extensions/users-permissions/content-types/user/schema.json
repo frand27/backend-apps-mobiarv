@@ -110,7 +110,8 @@
       "type": "integer"
     },
     "approve_admin": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "role_user": {
       "type": "string",
