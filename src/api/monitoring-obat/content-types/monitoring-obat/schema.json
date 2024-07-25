@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "monitoring_obats",
+  "info": {
+    "singularName": "monitoring-obat",
+    "pluralName": "monitoring-obats",
+    "displayName": "Monitoring Obat"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "id_user": {
+      "type": "integer",
+      "required": true
+    },
+    "drinking_date": {
+      "type": "datetime",
+      "required": true
+    },
+    "drinking_time": {
+      "type": "time",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Sudah Minum",
+        "Telat Minum",
+        "Telat Info"
+      ]
+    }
+  }
+}

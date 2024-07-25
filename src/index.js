@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 module.exports = {
   /**
@@ -16,5 +16,34 @@ module.exports = {
    * This gives you an opportunity to set up your data model,
    * run jobs, or perform some special logic.
    */
-  bootstrap(/*{ strapi }*/) {},
+  bootstrap({ strapi }) {
+    // const schedule = require("node-schedule");
+    // const timeChecker = "*/10 * * * * *";
+    // // const timeChecker = "* * * * * *";
+    // schedule.scheduleJob("cron-jon", timeChecker, async () => {
+    //   const dataToken = ""
+    //   const message = {
+    //     notification: {
+    //       title: "Billing",
+    //       body: `Saatnya minum obat`,
+    //     },
+    //     data: {
+    //       type: "billing received",
+    //     },
+    //     android: {
+    //       notification: {
+    //         sound: "default",
+    //       },
+    //     },
+    //     token: dataToken,
+    //   };
+    //   await admin.messaging().send(message);
+    //   console.log("scheduler active !");
+    //   // const find = await strapi.db
+    //   //   .query("api::customer-service.customer-service")
+    //   //   .findMany();
+    //   // console.log(find);
+    //   console.log("==========================");
+    // });
+  },
 };

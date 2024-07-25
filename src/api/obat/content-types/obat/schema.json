@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "obats",
+  "info": {
+    "singularName": "obat",
+    "pluralName": "obats",
+    "displayName": "Obat"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
