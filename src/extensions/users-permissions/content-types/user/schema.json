@@ -125,6 +125,9 @@
     },
     "step_register": {
       "type": "integer"
+    },
+    "next_drug_date": {
+      "type": "datetime"
     }
   }
 }
