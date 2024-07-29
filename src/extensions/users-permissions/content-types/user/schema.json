@@ -128,6 +128,9 @@
     },
     "next_drug_date": {
       "type": "datetime"
+    },
+    "fullname": {
+      "type": "string"
     }
   }
 }
