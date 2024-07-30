@@ -4,7 +4,8 @@
   "info": {
     "singularName": "monitoring-obat",
     "pluralName": "monitoring-obats",
-    "displayName": "Monitoring Obat"
+    "displayName": "Monitoring Obat",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -30,6 +31,9 @@
         "Telat Minum",
         "Telat Info"
       ]
+    },
+    "drinkingTime": {
+      "type": "string"
     }
   }
 }
