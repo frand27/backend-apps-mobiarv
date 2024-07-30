@@ -131,6 +131,9 @@
     },
     "fullname": {
       "type": "string"
+    },
+    "fcm_token": {
+      "type": "text"
     }
   }
 }
