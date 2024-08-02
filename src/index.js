@@ -17,33 +17,32 @@ module.exports = {
    * run jobs, or perform some special logic.
    */
   bootstrap({ strapi }) {
+    // // const admin = require("firebase-admin");
     // const schedule = require("node-schedule");
-    // const timeChecker = "*/10 * * * * *";
-    // // const timeChecker = "* * * * * *";
+    // const timeChecker = "*/10 * * * * *"; // Every 10 seconds, starting at seconds past the minute
     // schedule.scheduleJob("cron-jon", timeChecker, async () => {
-    //   const dataToken = ""
-    //   const message = {
-    //     notification: {
-    //       title: "Billing",
-    //       body: `Saatnya minum obat`,
-    //     },
-    //     data: {
-    //       type: "billing received",
-    //     },
-    //     android: {
-    //       notification: {
-    //         sound: "default",
-    //       },
-    //     },
-    //     token: dataToken,
-    //   };
-    //   await admin.messaging().send(message);
-    //   console.log("scheduler active !");
-    //   // const find = await strapi.db
-    //   //   .query("api::customer-service.customer-service")
-    //   //   .findMany();
-    //   // console.log(find);
-    //   console.log("==========================");
+    //   const findAllUser = await strapi.db
+    //     .query("plugin::users-permissions.user")
+    //     .findMany({});
+    //   for (const item of findAllUser) {
+    //     console.log(item.username, "username");
+    //     // const message = {
+    //     //   notification: {
+    //     //     title: "Saatnya Minum Obat",
+    //     //     body: `Sudah Jam-nya minum obat yuk.. lapor...`,
+    //     //   },
+    //     //   data: {
+    //     //     type: "waktunya minum obat",
+    //     //   },
+    //     //   android: {
+    //     //     notification: {
+    //     //       sound: "default",
+    //     //     },
+    //     //   },
+    //     //   token: dataToken,
+    //     // };
+    //     // await admin.messaging().send(message);
+    //   }
     // });
   },
 };
