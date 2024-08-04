@@ -78,15 +78,15 @@ module.exports = {
             await admin.messaging().send(message);
             console.log(`Notification sent to user ${user.id} at ${now}`);
 
-            // Schedule the next notification 2 minutes later
+            // Schedule the next notification 1 minutes later
             schedule.scheduleJob(
-              moment().add(2, "minutes").toDate(),
+              moment().add(1, "minutes").toDate(),
               async () => {
                 try {
                   await admin.messaging().send(message);
                   console.log(
                     `Next notification sent to user ${user.id} at ${moment()
-                      .add(2, "minutes")
+                      .add(1, "minutes")
                       .format("HH:mm:ss")}`
                   );
                 } catch (error) {
