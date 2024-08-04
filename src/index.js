@@ -50,6 +50,10 @@ module.exports = {
 
       for (const user of findAllUser) {
         const medicationTime = moment(user.medication_time, "HH:mm:ss.SSS")
+          .set({
+            second: 0,
+            millisecond: 0,
+          })
           .utc()
           .format("HH:mm:ss");
 
@@ -74,15 +78,15 @@ module.exports = {
             await admin.messaging().send(message);
             console.log(`Notification sent to user ${user.id} at ${now}`);
 
-            // Schedule the next notification 10 minutes later
+            // Schedule the next notification 2 minutes later
             schedule.scheduleJob(
-              moment().add(10, "minutes").toDate(),
+              moment().add(2, "minutes").toDate(),
               async () => {
                 try {
                   await admin.messaging().send(message);
                   console.log(
                     `Next notification sent to user ${user.id} at ${moment()
-                      .add(10, "minutes")
+                      .add(2, "minutes")
                       .format("HH:mm:ss")}`
                   );
                 } catch (error) {
@@ -99,7 +103,6 @@ module.exports = {
 
     // Schedule the check to run every 10 seconds
     schedule.scheduleJob("* * * * * *", async () => {
-      console.log("Checking for users to notify...");
       await scheduleNotification();
     });
   },
