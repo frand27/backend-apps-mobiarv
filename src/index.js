@@ -46,7 +46,8 @@ module.exports = {
         .query("plugin::users-permissions.user")
         .findMany({});
 
-      const now = moment().utc().format("HH:mm:ss");
+      const nowUtc = moment().utc();
+      const now = nowUtc.add(7, "hours").format("HH:mm:ss");
 
       for (const user of findAllUser) {
         const medicationTime = moment(user.medication_time, "HH:mm:ss.SSS")

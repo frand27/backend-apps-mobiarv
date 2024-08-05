@@ -20,17 +20,9 @@
       "type": "datetime",
       "required": true
     },
-    "drinking_time": {
-      "type": "time",
-      "required": true
-    },
     "status": {
       "type": "enumeration",
-      "enum": [
-        "Sudah Minum",
-        "Telat Minum",
-        "Telat Info"
-      ]
+      "enum": ["Sudah Minum", "Telat Minum", "Telat Info"]
     },
     "drinkingTime": {
       "type": "string"
@@ -39,6 +31,9 @@
       "type": "string"
     },
     "patient_name": {
+      "type": "string"
+    },
+    "drinking_time": {
       "type": "string"
     }
   }
