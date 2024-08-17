@@ -70,10 +70,6 @@
       "type": "string",
       "required": false
     },
-    "no_identitas": {
-      "type": "integer",
-      "required": false
-    },
     "no_handphone": {
       "type": "string",
       "required": false
@@ -133,6 +129,9 @@
       "type": "string"
     },
     "fcm_token": {
+      "type": "text"
+    },
+    "no_identitas": {
       "type": "text"
     }
   }
